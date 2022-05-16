@@ -1,0 +1,257 @@
+/* Navbar ---------------------------------------------------------------- */
+.navbar {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+    width: 90%;
+    margin: 11px auto;
+    border-radius: 15px;
+}
+
+.navbar-brand {
+    font-family: viga;
+    font-size: 30px;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    margin-right: 30px;
+}
+
+.nav-link:hover::after {                        /*underline link navbar*/
+    content: '';
+    display: block;
+    border-bottom: 3px solid #0B63DC;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+}
+
+
+/* Jumbotron ---------------------------------------------------------------- */
+.jumbotron {
+    padding-top: 7rem;
+    background-image: url(../img/Hero/city.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.jumbotron .img-thumbnail {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    border: 3px solid rgb(86, 86, 204);
+    transition: 0.3s;
+}
+
+.jumbotron .img-thumbnail:hover {
+    transform: scale(1.030);
+    box-shadow: 0 0 25px rgba(73, 255, 240, 0.6);
+}
+
+.jumbotron h1, .jumbotron p {
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.jumbotron p {
+    font-weight: 500;
+}
+
+.jumbotron h1 {
+    font-weight: 370;
+}
+
+
+/* About ---------------------------------------------------------------- */
+.about h2 {
+    margin-top: 50px;
+}
+
+.about p {
+    text-align: justify;
+}
+
+.about img {
+    margin-bottom: 50px;
+}
+
+/* gambar jollymolly */
+.jm-box {
+    position: relative;
+    background-color: rgba(58, 58, 94, 0.8);
+    border-radius: 15px;
+    height: 450px;
+    margin: 100px 0 0 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.jm-box::before {
+    content: 'Molly';
+    position: absolute;
+    color: white;
+    font-size: 3.5em;
+    font-weight: bold;
+    font-style: italic;
+    top: 80px;
+    right: -100%;                      /*tulisannya disembunyikan diluar box make 100px terus munculnya 10%*/
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.jm-box:hover::before {
+    right: -5%;
+    transform: translate(-30%, 0);
+    opacity: 0.4;
+}
+
+.jm-box::after {
+    content: 'Jolly';
+    position: absolute;
+    color: white;
+    font-size: 3.5em;
+    font-weight: bold;
+    font-style: italic;
+    top: 280px;
+    left: -100%;                     
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.jm-box:hover::after {
+    left: 10%;
+    transform: translate(30%, 0);  
+    opacity: 0.4;
+}
+
+.jm-name {
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translate3d(0, 0, 20px);
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.jm-box:hover .jm-name {
+    top: 20px;
+    opacity: 1;
+}
+
+.jm-img {
+    max-width: 320px;
+    position: relative;
+    top: 20%;
+    left: 5%;
+    transform: translate3d(0, 0, 50px); 
+    transition: 0.5s;
+}
+
+.jm-box:hover .jm-img {
+   transform: scale(1.2) rotate(7deg) translate3d(0, 0, 50px) !important;
+}
+
+/* gambar jollymolly Desktop Version */
+@media (min-width: 992px) {
+    .jm-box:hover::before {
+        right: 10%;
+    }
+
+    .jm-img {
+        max-width: 400px;
+        top: 10%;  
+    }
+}
+
+
+
+/* Projects -------------------------------------------------------------------------- */
+.project {
+    margin-top: 100px;
+    background-image: url(../img/Project/space.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.project h2 {
+    text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.6);
+}
+
+.card{
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: 0.25s;
+}
+
+.card-title {
+    font-family: viga;
+    font-size: 25px;
+}
+
+.card img {
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.card:hover {
+    box-shadow: 0 0 25px rgba(68, 231, 236, 0.8);
+    transform: scale(1.050) !important;
+}
+
+.card .btn {
+    border-radius: 30px ;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+    transition: 0.4s; 
+}
+
+.card .btn:hover {
+    transform: translate(0, -5px);
+    background-color: #0b57c0;
+}
+
+
+/* Contact ---------------------------------------------------------------- */
+.contact .btn {
+    border-radius: 30px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+    transition: 0.4s;
+    width: 114px;
+}
+
+.contact .btn:hover {
+    transform: translate(0, -5px);
+    background-color: #0b57c0;
+}
+
+.form-control::-webkit-input-placeholder {
+    font-style: italic;
+    color: #ACACAC;
+}
+
+/* FOOTER -----------------------*/
+footer {
+    background-color: rgb(58, 58, 94);
+    font-family: Viga;
+    color: white;
+    height: 185px;
+    margin-top: 150px;
+}
+
+.ig, .gh, .link {
+   color: white;
+   font-size: 30px;
+   padding-left: 10px; 
+}
+
+section {
+    padding-top: 5rem;
+}
+
+
+
+
+
+
+
+
